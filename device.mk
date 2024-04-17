@@ -368,7 +368,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.sensors-service.multihal \
+    android.hardware.sensors-service.xiaomi-multihal \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
@@ -392,7 +392,8 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/xiaomi
 
 # Telephony
 PRODUCT_PACKAGES += \
