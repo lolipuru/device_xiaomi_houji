@@ -31,7 +31,7 @@ Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
 SPDX-License-Identifier: BSD-3-Clause-Clear
 ==========================================================================
 -->
-<manifest version="1.0" type="device" target-level="8">
+<manifest version="7.0" type="device" target-level="8">
     <!-- CapabilityConfigStore HAL Service  -->
     <hal format="hidl">
         <name>vendor.qti.hardware.capabilityconfigstore</name>
@@ -78,23 +78,6 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <instance>default</instance>
         </interface>
     </hal>
-    <!-- NFC HAL service -->
-    <hal format="aidl">
-        <name>android.hardware.nfc</name>
-        <version>1</version>
-        <fqname>INfc/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.nxp.nxpnfc_aidl</name>
-        <version>1</version>
-        <fqname>INxpNfc/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.secure_element</name>
-        <version>1</version>
-        <fqname>ISecureElement/eSE1</fqname>
-    </hal>
-
    <!-- IMS UCE Service -->
    <hal format="hidl">
        <name>com.qualcomm.qti.uceservice</name>
@@ -126,6 +109,16 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
        </interface>
    </hal>
     <hal format="hidl">
+       <name>vendor.qti.ims.factory</name>
+       <transport>hwbinder</transport>
+       <version>1.1</version>
+       <version>2.2</version>
+       <interface>
+         <name>IImsFactory</name>
+         <instance>default</instance>
+       </interface>
+   </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.cacert</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -135,7 +128,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         </interface>
     </hal>
     <!-- Factory HAL service -->
-    <hal format="hidl">
+    <!-- <hal format="hidl">
         <name>vendor.qti.hardware.factory</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -143,7 +136,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <name>IFactory</name>
             <instance>default</instance>
         </interface>
-    </hal>
+    </hal> -->
     <!-- Secure image data processor HAL Service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.secureprocessor.device</name>
@@ -183,6 +176,11 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- <hal format="aidl">
+        <name>android.hardware.contexthub</name>
+        <version>2</version>
+        <fqname>IContextHub/default</fqname>
+    </hal> -->
     <!-- fm -->
     <hal format="hidl">
         <name>vendor.qti.hardware.fm</name>
@@ -194,7 +192,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         </interface>
     </hal>
     <!--ANT-->
-    <hal format="hidl">
+    <!--<hal format="hidl">
         <name>com.dsi.ant</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -202,8 +200,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <name>IAnt</name>
             <instance>default</instance>
         </interface>
-    </hal>
-
+    </hal> -->
     <!-- WifiStats HAL service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.wifi.wifilearner</name>
@@ -243,7 +240,6 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <instance>default</instance>
         </interface>
     </hal>
-    -->
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.spu</name>
         <version>2</version>
@@ -252,14 +248,34 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.security.keymint</name>
-        <version>3</version>
-        <fqname>IKeyMintDevice/strongbox</fqname>
+    -->
+    <!-- Trusted UI HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.trustedui</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::ITrustedUI/default</fqname>
+        <fqname>@1.2::ITrustedUI/qtee-vm</fqname>
+        <fqname>@1.1::ITrustedInput/default</fqname>
+        <fqname>@1.1::ITrustedInput/qtee-vm</fqname>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.security.keymint</name>
-        <version>3</version>
-        <fqname>IRemotelyProvisionedComponent/strongbox</fqname>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IDeviceInfo/deviceinfo</fqname>
+    </hal>
+    <!-- Alarm HAL service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.alarm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAlarm</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>com.qualcomm.qti.dpm.api</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IdpmQmi/dpmQmiService</fqname>
     </hal>
 </manifest>
