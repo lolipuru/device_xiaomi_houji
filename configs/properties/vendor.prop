@@ -67,6 +67,7 @@ vendor.display.use_layer_ext=0
 ro.vendor.audio.dolby.dax.version=DAX3_3.8.5.20_r1
 
 # DPM
+persist.vendor.dpm.feature=0
 persist.vendor.dpm.vndr.idletimer.mode=default
 persist.vendor.dpm.vndr.halservice.enable=1
 persist.vendor.dpm.vndr.feature=11
