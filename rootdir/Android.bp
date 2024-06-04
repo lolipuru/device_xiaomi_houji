@@ -40,6 +40,12 @@ sh_binary {
     vendor: true,
 }
 
+sh_binary {
+    name: "init.qti.display_boot_houji.sh",
+    src: "bin/init.qti.display_boot.sh",
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "init.qcom.rc",
     src: "etc/init.qcom.rc",

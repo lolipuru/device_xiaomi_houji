@@ -62,3 +62,4 @@ vendor.qti.hardware.display.config-V7-ndk
 vendor.qti.hardware.display.demura-V1-ndk
 vendor.qti.hardware.display.postproc-V1-ndk
 vendor.qti.hardware.servicetrackeraidl-V1-ndk
+vendor.qti.hardware.wifi.supplicant-V1-ndk
